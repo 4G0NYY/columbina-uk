@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-void text-moon-200 font-sans antialiased;
+    /* Faint drifting starfield gradient wash under everything */
+    background-image:
+      radial-gradient(1200px 600px at 70% -10%, rgba(147, 160, 201, 0.08), transparent 60%),
+      radial-gradient(900px 500px at 15% 110%, rgba(169, 167, 212, 0.07), transparent 55%);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: rgba(233, 207, 143, 0.28);
+    color: #fbfcff;
+  }
+}
+
+@layer components {
+  /* A soft moonlit glass panel */
+  .panel {
+    @apply rounded-2xl border border-moon-600/20 bg-midnight/40 backdrop-blur-sm;
+    box-shadow: 0 1px 0 0 rgba(242, 244, 251, 0.04) inset, 0 20px 60px -30px rgba(0, 0, 0, 0.8);
+  }
+
+  .halo-text {
+    color: #f4e6bf;
+    text-shadow: 0 0 24px rgba(233, 207, 143, 0.35);
+  }
+
+  .eyebrow {
+    @apply font-mono text-[0.7rem] uppercase tracking-widest2 text-moon-500;
+  }
+}
+
+/* Respect users who prefer reduced motion: kill all ambient animation. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
