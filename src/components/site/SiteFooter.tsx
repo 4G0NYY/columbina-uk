@@ -25,8 +25,9 @@ export function SiteFooter() {
 
         <p className="mx-auto max-w-2xl text-xs leading-relaxed text-moon-600">
           Fan-made shrine, built with reverence and no affiliation to HoYoverse. Genshin
-          Impact, Columbina, and all related names and imagery are © HoYoverse. Lore is
-          paraphrased from community wikis; atmospheric quotes are original flavor.
+          Impact, Columbina, all related names and imagery, and the “Columbina” lullaby audio
+          are © HoYoverse, used here as fan content. Lore is paraphrased from community wikis;
+          atmospheric quotes are original flavor.
         </p>
 
         <div className="flex items-center justify-center gap-3 pt-2">

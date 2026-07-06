@@ -7,7 +7,7 @@ import { Hero } from "../components/lore/Hero";
 import { LorePanel } from "../components/lore/LorePanel";
 import { KonamiListener } from "../components/secrets/KonamiListener";
 import { HiddenDove } from "../components/secrets/HiddenDove";
-import { LORE_SECTIONS } from "../data/lore";
+import { LORE_SECTIONS, LORE_DEEP_SECTIONS } from "../data/lore";
 
 export function Landing() {
   // Browser-only render; seeds the hero moon to tonight's real phase.
@@ -26,6 +26,22 @@ export function Landing() {
       <div className="relative">
         {LORE_SECTIONS.map((section, i) => (
           <LorePanel key={section.id} section={section} index={i} />
+        ))}
+      </div>
+
+      {/* Spoiler veil before the deep story (Rächer & Dottore arcs) */}
+      <div className="mx-auto max-w-3xl px-6 py-20 text-center">
+        <div className="mx-auto mb-6 h-px w-2/3 bg-gradient-to-r from-transparent via-moon-600/40 to-transparent" />
+        <p className="eyebrow text-halo/70">Beyond here, the whole of the moon's tale</p>
+        <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-moon-500">
+          Major Nod-Krai story spoilers follow — the Rächer of Solnari and Il Dottore arcs,
+          through to her homecoming.
+        </p>
+      </div>
+
+      <div className="relative">
+        {LORE_DEEP_SECTIONS.map((section, i) => (
+          <LorePanel key={section.id} section={section} index={LORE_SECTIONS.length + i} />
         ))}
       </div>
 

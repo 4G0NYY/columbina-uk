@@ -37,8 +37,11 @@ Progress is tracked in `localStorage` and shown as `☾ x/5` in the header once 
 
 The site ships without bundling any HoYoverse imagery. To add your own, drop files into
 `public/assets/secrets/` and list their paths in `src/data/secretAssets.ts`. They then rain during
-the Konami secret and appear in Silvermoon Hall. A synthesized hum (`src/lib/hum.ts`) needs no asset;
-drop `humming.mp3` there and swap the function body to use a real recording.
+the Konami secret and appear in Silvermoon Hall.
+
+**Audio:** the secrets play `public/assets/secrets/bina_lullaby.mp3` — Columbina's official
+HoYoverse lullaby — via `src/lib/hum.ts`, falling back to a synthesized hum if the file can't load.
+The lullaby is © HoYoverse and credited in the site footer.
 
 ## Deploy (GitHub Pages)
 
