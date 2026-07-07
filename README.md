@@ -35,40 +35,12 @@ Progress is tracked in `localStorage` and shown as `☾ x/5` in the header once 
 
 ### Adding your own Columbina gifs
 
-The site ships without bundling any HoYoverse imagery. To add your own, drop files into
-`public/assets/secrets/` and list their paths in `src/data/secretAssets.ts`. They then rain during
-the Konami secret and appear in Silvermoon Hall.
+The site ships without bundling any HoYoverse imagery. //TODO: Add bina gifs into
+`public/assets/secrets/` and list their paths in `src/data/secretAssets.ts`.
 
 **Audio:** the secrets play `public/assets/secrets/bina_lullaby.mp3` — Columbina's official
 HoYoverse lullaby — via `src/lib/hum.ts`, falling back to a synthesized hum if the file can't load.
 The lullaby is © HoYoverse and credited in the site footer.
-
-## Deploy (GitHub Pages)
-
-Pushing to `main` runs `.github/workflows/deploy.yml`, which builds and deploys to Pages.
-
-One-time setup:
-
-1. Repo **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-2. `public/CNAME` already contains `columbina.uk`.
-3. Configure DNS at your registrar (see below), then enable **Enforce HTTPS** once it resolves.
-
-### DNS records for the apex domain `columbina.uk`
-
-| Type  | Host / Name | Value                    |
-| ----- | ----------- | ------------------------ |
-| A     | `@`         | `185.199.108.153`        |
-| A     | `@`         | `185.199.109.153`        |
-| A     | `@`         | `185.199.110.153`        |
-| A     | `@`         | `185.199.111.153`        |
-| AAAA  | `@`         | `2606:50c0:8000::153`    |
-| AAAA  | `@`         | `2606:50c0:8001::153`    |
-| AAAA  | `@`         | `2606:50c0:8002::153`    |
-| AAAA  | `@`         | `2606:50c0:8003::153`    |
-| CNAME | `www`       | `4g0nyy.github.io.`      |
-
-Clean deep links (`/calculator`, `/silvermoon`) work via the SPA fallback in `public/404.html`
-paired with the decode snippet in `index.html`.
 
 ## Data & attribution
 
