@@ -26,7 +26,7 @@ export function Guestbook() {
             The Moonlit Guestbook
           </h1>
           <p className="mx-auto max-w-xl text-moon-400">
-            She leaves a scatter of white feathers wherever she goes. Leave one of your own — a
+            She leaves a scatter of white feathers wherever she goes. Leave one of your own; a
             word, a line, a hello. Sign in with GitHub, and the moon will keep your note among the
             others.
           </p>
