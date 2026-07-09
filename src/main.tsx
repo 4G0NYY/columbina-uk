@@ -4,6 +4,7 @@ import { RouterProvider } from "react-router-dom";
 import { MotionConfig } from "framer-motion";
 import { router } from "./router";
 import { SecretProvider } from "./components/secrets/SecretProvider";
+import { PhaseAtmosphere } from "./components/ambient/PhaseAtmosphere";
 import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
@@ -12,6 +13,8 @@ createRoot(document.getElementById("root")!).render(
         prefers-reduced-motion setting, matching the CSS guard in index.css. */}
     <MotionConfig reducedMotion="user">
       <SecretProvider>
+        {/* Site-wide wash that tracks tonight's real lunar illumination. */}
+        <PhaseAtmosphere />
         <RouterProvider router={router} />
       </SecretProvider>
     </MotionConfig>

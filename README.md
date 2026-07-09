@@ -17,8 +17,14 @@ npm run preview    # preview the production build
 ## The pages
 
 - **`/`** the aesthetics and lore hub: a moonlit hero, drifting feathers, a star-field, a live
-  "moon tonight" readout that tracks the real lunar phase, and Columbina's story (Kuutar, the
-  Frostmoon Scions, the Fatui, Silvermoon Hall), with **six hidden secrets**.
+  "moon tonight" readout that tracks the real lunar phase, a **moon's reading of the day** (a daily
+  deterministic omen), Columbina's story (Kuutar, the Frostmoon Scions, the Fatui, Silvermoon Hall),
+  **her lullaby** with a live visualizer, an interactive **relationship constellation**, a **Moon-Prayer
+  Night** vigil counting down to the next real full moon, a **Finnish/Nordic lexicon**, and **seven
+  hidden secrets**. The whole page is washed by a **phase-reactive atmosphere** that brightens with
+  tonight's real illumination.
+- **`/guestbook`** a moonlit guestbook, powered by giscus (GitHub Discussions). One-time setup lives
+  in `src/data/guestbook.ts`; until it's configured the page shows a friendly "not open yet" note.
 - **`/calculator`** a damage calculator. The engine (`src/lib/damage.ts`) is the game's exact,
   unit-tested damage formula, so it is accurate for whatever stats you enter from your own account.
   Numbers still community-sourced in patch 6.3 are flagged `est.` and are fully editable; Lunar
@@ -29,7 +35,7 @@ npm run preview    # preview the production build
 - **`/moonlit`** a reward page, linked from the `☾` counter, that unlocks a downloadable
   collector's moon card once every secret has been found.
 
-## The six secrets
+## The seven secrets
 
 1. **Konami code** (↑↑↓↓←→←→ B A): a shower of doves and a hum.
 2. **Click the moon 7×** in the hero: it cycles its phases.
@@ -37,6 +43,9 @@ npm run preview    # preview the production build
 4. **`/silvermoon`**: an unlisted route; the only door is the faint `☾` in the footer.
 5. **Hold her name** in the hero: it dissolves to reveal *Kuutar*.
 6. **Catch the feather**: a single feather drifts down the landing page; click it before it falls.
+7. **The moon-gate**: in the Moon-Prayer Night vigil, a full moon rises to be clicked — but *only*
+   on the nights the real moon is actually full. The one secret you cannot rush; come back under a
+   whole moon. (`src/lib/moon.ts` `isFullMoon` decides.)
 
 Progress is tracked in `localStorage` and shown as `☾ x/6` in the header once you find the first.
 The counter links to `/moonlit`, where finding them all is rewarded.

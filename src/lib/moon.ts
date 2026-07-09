@@ -64,6 +64,15 @@ export function nextPhaseDate(date: Date, targetPhase: number): Date {
   return new Date(date.getTime() + daysUntilPhase(date, targetPhase) * 86400000);
 }
 
+/**
+ * True when `date` falls in the Full Moon name-window (the same ~3.7-day slot
+ * `phaseName` labels "Full Moon"). Used to gate the moon-only secret so it can
+ * only be found on the nights the real moon is actually full.
+ */
+export function isFullMoon(date: Date): boolean {
+  return phaseName(phaseForDate(date)).name === "Full Moon";
+}
+
 export interface MoonInfo {
   phase: number;
   illumination: number;
