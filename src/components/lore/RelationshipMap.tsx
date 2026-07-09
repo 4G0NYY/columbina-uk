@@ -8,7 +8,7 @@ const byId = (id: string) => RELATIONS.find((r) => r.id === id);
  * Her constellation of bonds. Every figure who shaped her story is a star tied
  * back to Columbina at the centre; selecting one (click, tap, or keyboard)
  * lights it and tells what passed between them. Her own constellations, the lore
- * notes, are the only ones with no stars but the phases of the moon — so here we
+ * notes, are the only ones with no stars but the phases of the moon, so here we
  * lend her some.
  */
 export function RelationshipMap() {
@@ -26,7 +26,7 @@ export function RelationshipMap() {
 
       <div className="panel px-4 py-6 sm:px-8 sm:py-8">
         <svg
-          viewBox="0 0 100 92"
+          viewBox="0 0 100 96"
           className="mx-auto block w-full max-w-2xl"
           role="group"
           aria-label="A constellation of Columbina's relationships"
@@ -66,7 +66,7 @@ export function RelationshipMap() {
             );
           })}
 
-          {/* Columbina — the moon at the centre. */}
+          {/* Columbina, the moon at the centre. */}
           <g>
             <circle cx={CENTER.x} cy={CENTER.y} r={3.6} fill="rgba(233,207,143,0.18)" />
             <circle cx={CENTER.x} cy={CENTER.y} r={2} fill="#f4e6bf" />
@@ -92,7 +92,7 @@ export function RelationshipMap() {
                 role="button"
                 tabIndex={0}
                 aria-pressed={on}
-                aria-label={`${r.name} — ${r.tie}`}
+                aria-label={`${r.name}: ${r.tie}`}
                 onClick={() => setActive(on ? null : r)}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === " ") {

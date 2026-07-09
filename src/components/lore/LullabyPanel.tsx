@@ -6,7 +6,7 @@ import { playHum, stopHum } from "../../lib/hum";
 /**
  * Her lullaby, given a home on the page. It plays the official HoYoverse clip
  * through the same shared analyser the secrets use, so the visualizer breathes
- * with it. The melody has no words — the site never invents any — so this is
+ * with it. The melody has no words (the site never invents any) so this is
  * about the song itself: what it weaves together, and why she hums it.
  */
 export function LullabyPanel() {
@@ -30,8 +30,8 @@ export function LullabyPanel() {
       </h2>
       <p className="mx-auto mb-10 max-w-xl text-sm leading-relaxed text-moon-400">
         Listen closely in Silvermoon Hall and you may catch her humming, eyes closed, in no hurry
-        at all. The tune has no lyrics; it weaves together Chrysalis Suspirii and Saltatio Favillae —
-        the themes from the battle against La Signora — into something gentler.
+        at all. The tune has no lyrics; it weaves together Chrysalis Suspirii and Saltatio Favillae
+        (the themes from the battle against La Signora) into something gentler.
       </p>
 
       <motion.div

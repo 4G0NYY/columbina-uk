@@ -59,7 +59,7 @@ export function SecretProvider({ children }: { children: ReactNode }) {
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
       } catch {
-        /* storage unavailable — secret still tracked for this session */
+        /* storage unavailable, secret still tracked for this session */
       }
       return next;
     });

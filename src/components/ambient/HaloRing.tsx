@@ -1,5 +1,5 @@
 /**
- * A soft glowing halo ring — the warm gold accent of the palette. Rendered
+ * A soft glowing halo ring, the warm gold accent of the palette. Rendered
  * behind the moon in the hero. Purely decorative.
  */
 export function HaloRing({ size = 520, className = "" }: { size?: number; className?: string }) {

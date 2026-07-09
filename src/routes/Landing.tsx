@@ -37,12 +37,12 @@ export function Landing() {
 
       <MoonTonight date={seedDate} />
 
-      {/* The moon's reading of the day — a daily hook to return for. */}
+      {/* The moon's reading of the day: a daily hook to return for. */}
       <MoonReading date={seedDate} />
 
       <VitalsCard />
 
-      {/* Act I — canon up to her rest in Silvermoon Hall */}
+      {/* Act I: canon up to her rest in Silvermoon Hall */}
       <section className="mx-auto max-w-2xl px-6 pb-4 pt-10 text-center">
         <p className="eyebrow mb-3">Her Story</p>
         <h2 className="font-display text-3xl font-light text-moon-50 sm:text-4xl">
@@ -69,10 +69,10 @@ export function Landing() {
       {/* The people who shaped her, drawn as a constellation. */}
       <RelationshipMap />
 
-      {/* The vigil — a countdown to the next full moon, and a phase-gated secret. */}
+      {/* The vigil: a countdown to the next full moon, and a phase-gated secret. */}
       <MoonPrayerNight date={seedDate} />
 
-      {/* Trivia — names, etymology, language, and small true things */}
+      {/* Trivia: names, etymology, language, and small true things */}
       <div className="mx-auto my-8 h-px w-2/3 max-w-3xl bg-gradient-to-r from-transparent via-moon-600/30 to-transparent" />
       <AliasesList />
       <EtymologyGrid />

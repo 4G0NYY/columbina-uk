@@ -1,5 +1,5 @@
 /**
- * The moon's reading of the day — a small piece of moonlit fortune. It is pure
+ * The moon's reading of the day: a small piece of moonlit fortune. It is pure
  * flavour, not divination, but it is honest in one way: it is deterministic by
  * calendar day (UTC), so every visitor sees the same reading on the same date,
  * and it turns over at midnight UTC. No randomness, no tracking.

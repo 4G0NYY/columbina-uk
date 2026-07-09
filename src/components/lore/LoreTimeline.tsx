@@ -3,7 +3,7 @@ import type { LoreSection } from "../../data/lore";
 
 /**
  * A compact vertical timeline of Columbina's story. Each section is a node on a
- * moonlit rail — tighter than the original full-viewport panels, so her whole
+ * moonlit rail, tighter than the original full-viewport panels, so her whole
  * lore reads as one continuous descent.
  */
 export function LoreTimeline({ sections }: { sections: LoreSection[] }) {

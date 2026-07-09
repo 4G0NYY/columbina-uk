@@ -3,7 +3,7 @@ import { GLOSSARY } from "../../data/glossary";
 
 /**
  * A small lexicon of the Finnish, Nordic and classical words woven through her
- * story — kin to the Etymology grid, but for the language of the world around
+ * story, kin to the Etymology grid, but for the language of the world around
  * her rather than her names. Terms the game coined are marked, so the honest
  * ones and the invented ones never blur together.
  */
@@ -15,7 +15,7 @@ export function GlossaryList() {
         A Moonlit Lexicon
       </h2>
       <p className="mx-auto mb-12 max-w-xl text-center text-sm text-moon-400">
-        Nod-Krai is built on Finnish and Nordic roots. Here are the words that keep recurring —
+        Nod-Krai is built on Finnish and Nordic roots. Here are the words that keep recurring:
         real ones named by language, and the ones the game coined from them marked{" "}
         <span className="font-mono text-[0.7rem] uppercase tracking-widest text-halo/70">coined</span>.
       </p>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { DirectDamageResult } from "../../lib/damage";
 
-/** Transparent, expandable trace of every multiplier — the trust layer. */
+/** Transparent, expandable trace of every multiplier: the trust layer. */
 export function DamageBreakdown({
   result,
   inputs,

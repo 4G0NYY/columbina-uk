@@ -18,7 +18,7 @@ export interface LoreSection {
   quote?: string;
 }
 
-/** Act I — canon up to the Traveler finding her in Silvermoon Hall. */
+/** Act I: canon up to the Traveler finding her in Silvermoon Hall. */
 export const LORE_SECTIONS: LoreSection[] = [
   {
     id: "kuutar",
@@ -70,7 +70,7 @@ export const LORE_SECTIONS: LoreSection[] = [
   },
 ];
 
-/** Act II — the Rächer and Dottore arcs, through her homecoming. Spoilers. */
+/** Act II: the Rächer and Dottore arcs, through her homecoming. Spoilers. */
 export const LORE_DEEP_SECTIONS: LoreSection[] = [
   {
     id: "palestar",

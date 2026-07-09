@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { TRIVIA_NOTES } from "../../data/profile";
 
-/** Notable trivia — small true things about the little dove. */
+/** Notable trivia: small true things about the little dove. */
 export function TriviaNotes() {
   return (
     <section className="mx-auto max-w-3xl px-6 py-16">

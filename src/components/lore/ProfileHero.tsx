@@ -9,7 +9,7 @@ import { CHIPS } from "../../data/profile";
  * The profile masthead: her portrait framed against a moonlit halo, beside her
  * name, title, and at-a-glance chips.
  *
- * Preserves the two hero secrets from the original shrine — clicking the small
+ * Preserves the two hero secrets from the original shrine: clicking the small
  * moon seven times (SECRET: "moon") and holding the pointer on her name to
  * reveal "Kuutar" (SECRET: "kuutar").
  */
@@ -63,7 +63,7 @@ export function ProfileHero({ seedDate }: { seedDate: Date }) {
             <div className="pointer-events-none absolute inset-0 rounded-[1.75rem] ring-1 ring-inset ring-moon-50/10" />
           </div>
 
-          {/* Small, interactive moon accent — cycles phase; the 7-click secret. */}
+          {/* Small, interactive moon accent: cycles phase; the 7-click secret. */}
           <div className="absolute -right-3 -top-3 sm:-right-5 sm:-top-5">
             <MoonPhase
               phase={phase}

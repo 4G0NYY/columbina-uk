@@ -1,5 +1,5 @@
 /**
- * Her constellation of bonds — the people who shaped Columbina's story, drawn
+ * Her constellation of bonds: the people who shaped Columbina's story, drawn
  * as stars around her. Blurbs are paraphrased from the same community sources
  * as the rest of the shrine (see LORE_SOURCES); positions are just aesthetic,
  * laid out to read like a real constellation.
@@ -12,7 +12,7 @@ export interface Relation {
   tie: string;
   /** A short paraphrased note on what passed between them. */
   note: string;
-  /** Normalised star position on a 100 × 92 field. */
+  /** Normalised star position on a 100 × 96 field. */
   x: number;
   y: number;
 }
@@ -25,7 +25,7 @@ export const RELATIONS: Relation[] = [
     id: "traveler",
     name: "The Traveler",
     tie: "called her by name",
-    note: "When Teyvat began to reject her and she passed clean through them, it was the Traveler who called her name — and her form knit back together in the sound of it. She later showed them the Frost Moon and the ship hidden within it.",
+    note: "When Teyvat began to reject her and she passed clean through them, it was the Traveler who called her name, and her form knit back together in the sound of it. She later showed them the Frost Moon and the ship hidden within it.",
     x: 50,
     y: 15,
   },
@@ -49,7 +49,7 @@ export const RELATIONS: Relation[] = [
     id: "dottore",
     name: "Il Dottore",
     tie: "her undoing, undone",
-    note: "Her Fatui subordinates were handed to him when she left. At Fontaine's festival he froze time and turned her own power against everyone but the Traveler — so she stepped out of the equation entirely, falling into the moon's reflection to deny him his ascension. In the end, together, they broke him.",
+    note: "Her Fatui subordinates were handed to him when she left. At Fontaine's festival he froze time and turned her own power against everyone but the Traveler, so she stepped out of the equation entirely, falling into the moon's reflection to deny him his ascension. In the end, together, they broke him.",
     x: 86,
     y: 50,
   },
@@ -65,7 +65,7 @@ export const RELATIONS: Relation[] = [
     id: "tsaritsa",
     name: "The Tsaritsa",
     tie: "demanded, then released",
-    note: "At her behest Columbina surrendered much of her power — and in that demand read the same extraction the Scions had called worship. The Tsaritsa issued the Palestar Edict to reclaim her at any cost, and, at the very last, revoked it and let her go.",
+    note: "At her behest Columbina surrendered much of her power, and in that demand read the same extraction the Scions had called worship. The Tsaritsa issued the Palestar Edict to reclaim her at any cost, and, at the very last, revoked it and let her go.",
     x: 50,
     y: 88,
   },
@@ -81,7 +81,7 @@ export const RELATIONS: Relation[] = [
     id: "canon-aria",
     name: "Canon & Aria",
     tie: "lent their last wish",
-    note: "The old Moons before her. Along with Tholindis and Sonnet, they lent Columbina their authority and their final wish — to rest at home, dissolving into moon marrow — so that she could return.",
+    note: "The old Moons before her. Along with Tholindis and Sonnet, they lent Columbina their authority and their final wish (to rest at home, dissolving into moon marrow) so that she could return.",
     x: 13,
     y: 47,
   },

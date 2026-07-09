@@ -1,4 +1,4 @@
-/** A small dove in flight — Columbina means "little dove." */
+/** A small dove in flight; Columbina means "little dove." */
 export function DoveGlyph({
   size = 40,
   className = "",

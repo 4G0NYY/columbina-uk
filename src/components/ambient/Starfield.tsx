@@ -11,7 +11,7 @@ interface Star {
 
 /**
  * A faint field of slowly twinkling stars. Positions are generated once and
- * memoized so they stay put across re-renders. Purely decorative — hidden from
+ * memoized so they stay put across re-renders. Purely decorative, hidden from
  * assistive tech and disabled under prefers-reduced-motion (via the CSS media
  * query in index.css, which neutralizes the animation).
  */

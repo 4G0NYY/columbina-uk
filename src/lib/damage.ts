@@ -3,8 +3,8 @@
  *
  * The direct-hit path implements the well-established, verifiable damage
  * formula (base → DMG bonus → DEF → RES → crit). These parts do not depend on
- * any character-specific leaked numbers — they are the game's universal
- * mechanics — so the calculator is accurate for whatever stats the user feeds
+ * any character-specific leaked numbers; they are the game's universal
+ * mechanics, so the calculator is accurate for whatever stats the user feeds
  * it from their own account.
  *
  * The Lunar-reaction path is explicitly an ESTIMATE: it applies Columbina's
@@ -110,7 +110,7 @@ export interface LunarReactionInput {
   baseReaction: number;
   /** Reaction DMG bonus fraction from EM / buffs (excluding the HP passive). */
   reactionBonus?: number;
-  /** Columbina's Max HP — drives her documented Lunar passive. */
+  /** Columbina's Max HP, drives her documented Lunar passive. */
   maxHP?: number;
   /** Passive: +per1000HP per 1000 Max HP, capped at capBonus. */
   per1000HP?: number;

@@ -8,7 +8,7 @@ const fmtDate = (d: Date) =>
   d.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
 
 /**
- * The moon's reading of the day — a single line of moonlit fortune, the same
+ * The moon's reading of the day: a single line of moonlit fortune, the same
  * for everyone on a given date and renewed at midnight UTC. Flavour, not
  * divination, and it says so.
  */
@@ -25,7 +25,7 @@ export function MoonReading({ date }: { date: Date }) {
         transition={{ duration: 0.9, ease: "easeOut" }}
         className="panel flex flex-col items-center gap-5 px-8 py-10 text-center"
       >
-        <MoonPhase phase={info.phase} size={64} title={`${info.name} — the reading's moon`} />
+        <MoonPhase phase={info.phase} size={64} title={`${info.name}: the reading's moon`} />
         <p className="eyebrow">The moon's reading · {fmtDate(date)}</p>
         <blockquote className="font-display text-2xl font-light leading-snug text-moon-50 sm:text-[1.7rem]">
           “{reading.text}”

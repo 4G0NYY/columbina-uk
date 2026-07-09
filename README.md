@@ -43,7 +43,7 @@ npm run preview    # preview the production build
 4. **`/silvermoon`**: an unlisted route; the only door is the faint `☾` in the footer.
 5. **Hold her name** in the hero: it dissolves to reveal *Kuutar*.
 6. **Catch the feather**: a single feather drifts down the landing page; click it before it falls.
-7. **The moon-gate**: in the Moon-Prayer Night vigil, a full moon rises to be clicked — but *only*
+7. **The moon-gate**: in the Moon-Prayer Night vigil, a full moon rises to be clicked, but *only*
    on the nights the real moon is actually full. The one secret you cannot rush; come back under a
    whole moon. (`src/lib/moon.ts` `isFullMoon` decides.)
 

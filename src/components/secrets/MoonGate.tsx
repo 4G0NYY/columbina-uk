@@ -9,7 +9,7 @@ import { playHum } from "../../lib/hum";
  * A secret that keeps the moon's own hours (SECRET: "moongate").
  *
  * On the nights the *real* moon is full, a faint second moon rises here to be
- * clicked. On every other night there is nothing to find but the waiting — the
+ * clicked. On every other night there is nothing to find but the waiting; the
  * only secret on the shrine that a patient visitor cannot rush, and must come
  * back for under a whole moon.
  */

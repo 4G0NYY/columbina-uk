@@ -2,7 +2,7 @@
  * Guestbook configuration.
  *
  * The moonlit guestbook is powered by giscus (https://giscus.app), which stores
- * every note as a GitHub Discussion on this repo — no server of our own, which
+ * every note as a GitHub Discussion on this repo, no server of our own, which
  * is the only way to keep a real guestbook on a static GitHub Pages site.
  *
  * TO TURN IT ON (a one-time, ~2-minute setup):

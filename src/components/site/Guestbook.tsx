@@ -45,8 +45,8 @@ export function Guestbook() {
         <p className="font-display text-2xl font-light text-moon-50">The guestbook is not open yet</p>
         <p className="mt-4 text-sm leading-relaxed text-moon-400">
           Its pages are still being bound. The owner needs only to finish a short one-time setup on
-          giscus — the steps live in{" "}
-          <code className="font-mono text-[0.8em] text-halo/80">src/data/guestbook.ts</code> — and
+          giscus. The steps live in{" "}
+          <code className="font-mono text-[0.8em] text-halo/80">src/data/guestbook.ts</code>, and then
           the moon will start keeping everyone's notes.
         </p>
       </div>

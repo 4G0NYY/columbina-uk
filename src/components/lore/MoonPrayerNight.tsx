@@ -15,7 +15,7 @@ function untilParts(target: Date, now: Date): { days: number; hours: number } {
 }
 
 /**
- * The vigil. She hoped only to last until Moon-Prayer Night — the full moon —
+ * The vigil. She hoped only to last until Moon-Prayer Night, the full moon,
  * and this band counts the shrine down to the next real one. On the night it
  * arrives it also opens the moon-gate secret (see MoonGate).
  */
@@ -45,7 +45,7 @@ export function MoonPrayerNight({ date }: { date: Date }) {
           {full ? "Moon-Prayer Night is here" : "Moon-Prayer Night"}
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-moon-400">
-          When her strength ran fast, she hoped only to last until Moon-Prayer Night — the night
+          When her strength ran fast, she hoped only to last until Moon-Prayer Night, the night
           the moon comes whole. The shrine keeps the vigil for her, counting down to the next real
           full moon overhead.
         </p>

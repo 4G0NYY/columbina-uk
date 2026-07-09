@@ -111,6 +111,6 @@ function playSynthHum(): void {
       osc.stop(now + 2.8);
     });
   } catch {
-    /* audio unavailable — silence is fine */
+    /* audio unavailable, silence is fine */
   }
 }

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ALIASES } from "../../data/profile";
 
 /**
- * Every name and title Columbina has carried — she never identified with any of
+ * Every name and title Columbina has carried; she never identified with any of
  * them until she chose her own.
  */
 export function AliasesList() {

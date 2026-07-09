@@ -5,7 +5,7 @@
  * (0, 0.5) waxes, (0.5, 1) wanes. The lit disc is a moonlight gradient; the
  * shadow is an SVG path built from the dark limb (a semicircle) joined to the
  * terminator (a half-ellipse whose x-radius tracks cos of the phase angle).
- * Aesthetic, not astronomical — but it reads as a believable moon.
+ * Aesthetic, not astronomical, but it reads as a believable moon.
  */
 function shadowPath(cx: number, cy: number, r: number, phase: number): string {
   const p = ((phase % 1) + 1) % 1;

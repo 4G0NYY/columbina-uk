@@ -1,5 +1,5 @@
 /**
- * Profile-card data for Columbina — the "at a glance" vitals, her many names,
+ * Profile-card data for Columbina: the "at a glance" vitals, her many names,
  * name etymologies, and notable trivia.
  *
  * Verified against the Genshin Impact Wiki's main Columbina article (infobox,
