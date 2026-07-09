@@ -49,7 +49,7 @@ export const RELATIONS: Relation[] = [
     id: "dottore",
     name: "Il Dottore",
     tie: "her undoing, undone",
-    note: "Her Fatui subordinates were handed to him when she left. At Fontaine's festival he froze time and turned her own power against everyone but the Traveler, so she stepped out of the equation entirely, falling into the moon's reflection to deny him his ascension. In the end, together, they broke him.",
+    note: "Her Fatui subordinates were handed to him when she left. During Moonprayer night he froze time and turned her own power against everyone but the Traveler, so she stepped out of the equation entirely, falling into the moon's reflection to deny him his ascension. In the end, together, they broke him.",
     x: 86,
     y: 50,
   },
