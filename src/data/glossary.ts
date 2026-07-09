@@ -35,8 +35,8 @@ export const GLOSSARY: GlossEntry[] = [
     term: "Kuuvahki",
     lang: "from Finnish roots",
     pron: "KOO-vah-ki",
-    gloss: "moonlight (the seeing kind)",
-    body: "Moonlight as a substance and a sense: the light she was born of, and the way she perceives a world she keeps her eyes closed against. Built from kuu (moon) with a watcher's root; the compound itself is the game's.",
+    gloss: "moon power",
+    body: "The primordial energy and power of the Three Moons. She turns her own body into it and pours it over Nod-Krai, and perceives the world through it while her eyes stay closed. Built from kuu (moon) and väki, a Finnic word for power or supernatural force; the compound spelling is the game's own.",
     coined: true,
   },
   {
@@ -52,7 +52,7 @@ export const GLOSSARY: GlossEntry[] = [
     lang: "Finnish",
     pron: "LWON-no-tar",
     gloss: "daughter of nature",
-    body: "In the Kalevala, a spirit of creation, the mother of the sea and sky. In Nod-Krai it names a kind of Frostmoon Scion spirit; Lauma, who apologised to Columbina and hid her away to heal, is one.",
+    body: "In the Kalevala, a spirit of creation, the mother of the sea and sky. In Nod-Krai it names a rare kind of moon spirit, a luonnotar being a type of kuuhenki; one was made from a fragment of Columbina's own soul to guide the Traveler to her.",
   },
   {
     term: "Hiisi",
@@ -66,7 +66,7 @@ export const GLOSSARY: GlossEntry[] = [
     lang: "German",
     pron: "REH-khuhr",
     gloss: "avenger",
-    body: "The German word for one who avenges. The Rächer of Solnari is the name she gave the enemy the Wild Hunt sent, the being the Traveler knew as Rerir. The Harbingers' world keeps its German just as their titles keep their Italian.",
+    body: "The German word for one who avenges. The Rächer of Solnari is how she named the enemy the Traveler knew as Rerir, the master of the Wild Hunt; it is his own Khaenri'ah epithet, which she recognised rather than coined. The Harbingers' world keeps its German just as their titles keep their Italian.",
   },
   {
     term: "Hyposelenia",

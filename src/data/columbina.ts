@@ -74,5 +74,5 @@ export interface Reaction {
 export const LUNAR_REACTIONS: Reaction[] = [
   { id: "lunar-charged", label: "Lunar-Charged", note: "Electro + Hydro lineage" },
   { id: "lunar-bloom", label: "Lunar-Bloom", note: "Dendro + Hydro lineage" },
-  { id: "lunar-crystallize", label: "Lunar-Crystallize", note: "Geo lineage" },
+  { id: "lunar-crystallize", label: "Lunar-Crystallize", note: "Hydro + Geo lineage" },
 ];

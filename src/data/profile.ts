@@ -20,10 +20,10 @@ export const VITALS: Vital[] = [
   { label: "Born as", value: "Kuutar", note: "on Hiisi Island, 400–500 years ago" },
   { label: "Title", value: "Moon Goddess of Nod-Krai", note: "the Trilune Goddess" },
   { label: "Rank", value: "Third of the Eleven", note: "Fatui Harbingers (formerly)" },
-  { label: "Element", value: "Hydro", note: "Tri-Lunar Convergence" },
+  { label: "Element", value: "Hydro", note: "power source: Tri-Lunar Convergence" },
   { label: "Weapon", value: "Catalyst" },
   { label: "Rarity", value: "5★" },
-  { label: "Species", value: "God", note: "born of kuuvahki, the Moon's own light" },
+  { label: "Species", value: "God", note: "kuuvahki, the Moon's own power, flows from her" },
   { label: "Affiliations", value: "Frostmoon Scions · Fatui · Three Moons" },
   { label: "Region", value: "Nod-Krai", note: "Hiisi Island · Silvermoon Hall" },
   { label: "Voiced by", value: "Emi Lo (EN) · Lynn (JP)", note: "Yang Menglu (CN) · Yu Yeong (KR)" },
@@ -88,10 +88,10 @@ export const ETYMOLOGY: Etymology[] = [
 
 /** Notable trivia, curated from the wiki's Trivia section. */
 export const TRIVIA_NOTES: string[] = [
-  "She keeps her eyes closed. She once refused to look upon a world she believed built on lies and falsehood, and instead senses everything through kuuvahki, moonlight that in some ways sees more than sight.",
+  "She keeps her eyes closed. She once refused to look upon a world she believed built on lies and falsehood, veiling her sight with gauze woven from moonlight, and instead senses everything through kuuvahki, the Moon's own power, which in some ways sees more than sight.",
   "She is the first playable deity in Genshin Impact who is not one of The Seven.",
   "Her constellations are the only ones with no stars at all; they are the phases of the moon instead.",
-  "She hates drinking coffee but loves how it smells, a habit she most likely picked up from Sandrone.",
+  "She hates drinking coffee but loves how it smells, a quirk that traces back to Sandrone's room, where she first tried the bitter drink.",
   "The flowers of Silvermoon Hall answer her moods: they turn red when she is angry or unsafe, and white when her strength runs low.",
   "She leaves a scatter of white feathers wherever she teleports herself or others.",
   "Her winged headpiece is modelled on a seraph's wings; the mask over her eyes echoes the pattern beneath a Seelie Court.",

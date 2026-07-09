@@ -127,7 +127,7 @@ export const LORE_DEEP_SECTIONS: LoreSection[] = [
     title: "The Moon's Reflection",
     body: [
       "At the festival, Il Dottore froze time and turned her own power against everyone but the Traveler. Rather than let him drink her dry, Columbina stepped out of the equation, falling into the moon's reflection and denying him his ascension.",
-      "Within it she drifted backward through time, the quiet cause of a dozen unexplained things. She left a message in the Traveler's room; a repentant Rerir cleared her path; Tholindis, Sonnet, and at last Canon and Aria lent her their authority and their final wish: to rest at home, dissolving into moon marrow. With Sandrone's World-Formula computing the one possible moment, she returned.",
+      "Within it she drifted backward through time, the quiet cause of a dozen unexplained things. She left a message in the Traveler's room; a repentant Rerir cleared her path; Tholindis, whose soul waited within the reflection, showed her the way back through time, and Canon, Aria, and Sonnet, the three Moon Sisters, lent her their authority and their final wish: to rest at home, dissolving into moon marrow. With Sandrone's World-Formula computing the one possible moment, she returned.",
     ],
     quote: "She was the ghost in every unexplained thing, haunting her way home.",
   },
@@ -145,8 +145,8 @@ export const LORE_DEEP_SECTIONS: LoreSection[] = [
     eyebrow: "XIII · Two Homes, One Moonlight",
     title: "Homecoming",
     body: [
-      "She chose to live among the Frostmoon Scions again. She revived Luonnotar and gave it free will, let a winged statue be raised in her likeness, learned to cook (badly, then quickly), and slipped small gifts to her friends, including a new wind glider to the Traveler for the company.",
-      "When a false Wild Hunt stirred, she checked the Moon's Reflection and found Rerir blameless. And when Fontaine held its film festival, she was cast as the lead of 'A Homecoming,' reunited with Sandrone beneath the lights, and met a dragon who wept. Both moon and Teyvat, now, are home.",
+      "She chose to live among the Frostmoon Scions again. She revived Luonnotar and gave it free will, let a winged statue be raised in her likeness, and slipped small gifts to her friends.",
+      "When a false Wild Hunt stirred, she checked the Moon's Reflection and found Rerir blameless. And when Fontaine held its film festival, she was cast as the lead of 'A Homecoming,' reunited with Sandrone beneath the lights. Both moon and Teyvat, now, are home.",
     ],
     quote: "Two homes, one moonlight, and at last time enough to enjoy them.",
   },
