@@ -17,6 +17,14 @@ export function Header() {
         <div className="flex items-center gap-6">
           <SecretCounter />
           <Link
+            to="/gallery"
+            className={`font-mono text-xs uppercase tracking-widest2 transition-colors ${
+              pathname === "/gallery" ? "halo-text" : "text-moon-500 hover:text-moon-200"
+            }`}
+          >
+            Gallery
+          </Link>
+          <Link
             to="/calculator"
             className={`font-mono text-xs uppercase tracking-widest2 transition-colors ${
               pathname === "/calculator"

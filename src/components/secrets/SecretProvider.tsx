@@ -8,8 +8,8 @@ import {
   type ReactNode,
 } from "react";
 
-/** The five hidden secrets scattered across the shrine. */
-export const SECRETS = ["konami", "moon", "dove", "silvermoon", "kuutar"] as const;
+/** The hidden secrets scattered across the shrine. */
+export const SECRETS = ["konami", "moon", "dove", "silvermoon", "kuutar", "feather"] as const;
 export type SecretId = (typeof SECRETS)[number];
 
 const STORAGE_KEY = "columbina.secrets.v1";

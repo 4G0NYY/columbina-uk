@@ -97,11 +97,6 @@ export function MoonPhase({ phase, size = 220, className = "", onClick, title }:
   );
 }
 
-/** Deterministic phase for a given date (seeds the hero moon so it feels alive). */
-export function phaseForDate(date: Date): number {
-  // Synodic month ≈ 29.53 days; anchor at a known new moon (2000-01-06).
-  const knownNew = Date.UTC(2000, 0, 6, 18, 14) / 86400000;
-  const days = date.getTime() / 86400000 - knownNew;
-  const phase = (days % 29.53058867) / 29.53058867;
-  return (phase + 1) % 1;
-}
+// The phase math now lives in lib/moon.ts (a fuller lunar engine). Re-exported
+// here so existing imports keep working.
+export { phaseForDate } from "../../lib/moon";

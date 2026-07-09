@@ -5,6 +5,7 @@ import { Header } from "../components/site/Header";
 import { Starfield } from "../components/ambient/Starfield";
 import { MoonPhase } from "../components/ambient/MoonPhase";
 import { DoveGlyph } from "../components/ambient/DoveGlyph";
+import { HumVisualizer } from "../components/secrets/HumVisualizer";
 import { COLUMBINA_GIFS } from "../data/secretAssets";
 import { useSecrets } from "../components/secrets/SecretProvider";
 import { playHum } from "../lib/hum";
@@ -55,14 +56,17 @@ export function Silvermoon() {
               className="mx-auto mt-10 max-h-64 rounded-2xl border border-moon-600/20"
             />
           ) : (
-            <button
-              type="button"
-              onClick={playHum}
-              title="Listen"
-              className="mx-auto mt-10 block text-moon-300 transition-transform hover:scale-110"
-            >
-              <DoveGlyph size={64} />
-            </button>
+            <div className="relative mx-auto mt-10 flex h-56 w-56 items-center justify-center">
+              <HumVisualizer size={224} />
+              <button
+                type="button"
+                onClick={playHum}
+                title="Listen"
+                className="relative z-10 text-moon-300 transition-transform hover:scale-110"
+              >
+                <DoveGlyph size={64} />
+              </button>
+            </div>
           )}
 
           <p className="mt-8 font-display text-sm italic text-lavender">…mm-mm-mmm…</p>

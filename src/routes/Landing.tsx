@@ -4,6 +4,7 @@ import { SiteFooter } from "../components/site/SiteFooter";
 import { Starfield } from "../components/ambient/Starfield";
 import { Feathers } from "../components/ambient/Feathers";
 import { ProfileHero } from "../components/lore/ProfileHero";
+import { MoonTonight } from "../components/lore/MoonTonight";
 import { VitalsCard } from "../components/lore/VitalsCard";
 import { LoreTimeline } from "../components/lore/LoreTimeline";
 import { AliasesList } from "../components/lore/AliasesList";
@@ -11,6 +12,7 @@ import { EtymologyGrid } from "../components/lore/EtymologyGrid";
 import { TriviaNotes } from "../components/lore/TriviaNotes";
 import { KonamiListener } from "../components/secrets/KonamiListener";
 import { HiddenDove } from "../components/secrets/HiddenDove";
+import { SecretFeather } from "../components/secrets/SecretFeather";
 import { LORE_SECTIONS, LORE_DEEP_SECTIONS } from "../data/lore";
 
 export function Landing() {
@@ -24,8 +26,11 @@ export function Landing() {
       <Header />
       <KonamiListener />
       <HiddenDove />
+      <SecretFeather />
 
       <ProfileHero seedDate={seedDate} />
+
+      <MoonTonight date={seedDate} />
 
       <VitalsCard />
 

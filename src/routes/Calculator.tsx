@@ -1,10 +1,21 @@
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Header } from "../components/site/Header";
 import { NumberField } from "../components/calc/NumberField";
 import { ResultCard } from "../components/calc/ResultCard";
 import { DamageBreakdown } from "../components/calc/DamageBreakdown";
+import { RotationBuilder } from "../components/calc/RotationBuilder";
+import { CompareTray } from "../components/calc/CompareTray";
 import { directDamage, lunarReactionDamage } from "../lib/damage";
+import {
+  decodePins,
+  decodeRotation,
+  encodePins,
+  encodeRotation,
+  type BuildShared,
+  type PinnedBuild,
+  type RotationStep,
+} from "../lib/build";
 import { COLUMBINA, DATA_VERSION, LUNAR_REACTIONS } from "../data/columbina";
 import { Starfield } from "../components/ambient/Starfield";
 
@@ -26,6 +37,7 @@ const DEFAULTS = {
 
 type Key = keyof typeof DEFAULTS;
 const KEYS = Object.keys(DEFAULTS) as Key[];
+const MAX_PINS = 3;
 
 export function Calculator() {
   const [sp, setSp] = useSearchParams();
@@ -40,9 +52,67 @@ export function Calculator() {
     return out;
   }, [sp]);
 
+  const shared: BuildShared = {
+    maxHP: state.maxHP,
+    dmgPct: state.dmgPct,
+    crPct: state.crPct,
+    cdPct: state.cdPct,
+    charLvl: state.charLvl,
+    enemyLvl: state.enemyLvl,
+    resPct: state.resPct,
+    defRedPct: state.defRedPct,
+  };
+
+  // Rotation: from the URL, or a single default step seeded from the build.
+  const rotation: RotationStep[] = useMemo(() => {
+    const decoded = decodeRotation(sp.get("rot"));
+    if (decoded) return decoded;
+    return [{ id: "s0", name: "Skill", talentPct: state.talentPct, hits: state.hits }];
+  }, [sp, state.talentPct, state.hits]);
+
+  const pins = useMemo<PinnedBuild[]>(() => decodePins(sp.get("pins")), [sp]);
+
   function set(key: Key, value: number) {
     const next = new URLSearchParams(sp);
     next.set(key, String(value));
+    setSp(next, { replace: true });
+    setCopied(false);
+  }
+
+  const setRotation = useCallback(
+    (steps: RotationStep[]) => {
+      const next = new URLSearchParams(sp);
+      next.set("rot", encodeRotation(steps));
+      setSp(next, { replace: true });
+      setCopied(false);
+    },
+    [sp, setSp]
+  );
+
+  const setPins = useCallback(
+    (list: PinnedBuild[]) => {
+      const next = new URLSearchParams(sp);
+      if (list.length) next.set("pins", encodePins(list));
+      else next.delete("pins");
+      setSp(next, { replace: true });
+      setCopied(false);
+    },
+    [sp, setSp]
+  );
+
+  function pinCurrent() {
+    if (pins.length >= MAX_PINS) return;
+    const label = `${Math.round(shared.maxHP).toLocaleString("en-US")} HP · ${shared.crPct}/${shared.cdPct}`;
+    setPins([...pins, { label, shared, rotation }]);
+  }
+
+  function loadPin(pin: PinnedBuild) {
+    const next = new URLSearchParams(sp);
+    (Object.entries(pin.shared) as [keyof BuildShared, number][]).forEach(([k, v]) =>
+      next.set(k, String(v))
+    );
+    if (pin.rotation[0]) next.set("talentPct", String(pin.rotation[0].talentPct));
+    next.set("rot", encodeRotation(pin.rotation));
     setSp(next, { replace: true });
     setCopied(false);
   }
@@ -65,6 +135,22 @@ export function Calculator() {
     maxHP: state.maxHP,
     enemyRes: state.resPct / 100,
   });
+
+  const rotationSum = rotation.reduce((sum, s) => {
+    const stepAvg = directDamage({
+      talentMultiplier: s.talentPct / 100,
+      scalingStat: state.maxHP,
+      dmgBonus: state.dmgPct / 100,
+      critRate: state.crPct / 100,
+      critDmg: state.cdPct / 100,
+      charLevel: state.charLvl,
+      enemyLevel: state.enemyLvl,
+      enemyRes: state.resPct / 100,
+      defReduction: state.defRedPct / 100,
+    }).avg;
+    return sum + stepAvg * Math.max(0, s.hits);
+  }, 0);
+  const totalHits = rotation.reduce((n, s) => n + Math.max(0, s.hits), 0);
 
   async function copyLink() {
     try {
@@ -197,20 +283,17 @@ export function Calculator() {
                 from your {state.maxHP.toLocaleString("en-US")} HP.
               </p>
             </fieldset>
+
+            <RotationBuilder steps={rotation} shared={shared} onChange={setRotation} />
           </div>
 
           {/* Results */}
           <div className="space-y-6">
-            <div className="flex items-center justify-between">
-              <NumberField
-                label="Hits / Rotation"
-                value={state.hits}
-                onChange={(v) => set("hits", v)}
-              />
+            <div className="flex justify-end">
               <button
                 type="button"
                 onClick={copyLink}
-                className="ml-4 mt-5 self-end whitespace-nowrap rounded-lg border border-halo/40 px-4 py-2 font-mono text-xs uppercase tracking-widest text-halo transition-colors hover:bg-halo/10"
+                className="whitespace-nowrap rounded-lg border border-halo/40 px-4 py-2 font-mono text-xs uppercase tracking-widest text-halo transition-colors hover:bg-halo/10"
               >
                 {copied ? "✓ copied" : "share build"}
               </button>
@@ -238,11 +321,13 @@ export function Calculator() {
 
             <ResultCard
               title="Rotation Total"
-              subtitle={`${state.hits} average hits`}
+              subtitle={`${totalHits} average hits across ${rotation.length} step${
+                rotation.length === 1 ? "" : "s"
+              }`}
               tone="halo"
               stats={[
-                { label: "Per hit (avg)", value: direct.avg },
-                { label: "Rotation", value: direct.avg * state.hits, emphasis: true },
+                { label: "Per hit (skill avg)", value: direct.avg },
+                { label: "Rotation", value: rotationSum, emphasis: true },
               ]}
             />
 
@@ -254,6 +339,15 @@ export function Calculator() {
                 { label: "HP passive", value: reaction.hpBonus * 100 },
                 { label: "Per reaction", value: reaction.dmg, emphasis: true },
               ]}
+            />
+
+            <CompareTray
+              live={{ shared, rotation }}
+              pins={pins}
+              onPin={pinCurrent}
+              onRemove={(i) => setPins(pins.filter((_, idx) => idx !== i))}
+              onLoad={loadPin}
+              canPin={pins.length < MAX_PINS}
             />
           </div>
         </div>
