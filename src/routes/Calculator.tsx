@@ -85,10 +85,10 @@ export function Calculator() {
           <p className="eyebrow mb-3">Beneath the Moon, the Numbers</p>
           <h1 className="font-display text-5xl font-light text-moon-50">Lunar Damage Calculator</h1>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-moon-400">
-            The engine is the game's exact damage formula — accurate for whatever stats you enter
+            The engine is the game's exact damage formula, accurate for whatever stats you enter
             from your own account. Values marked{" "}
             <span className="font-mono text-halo/80">est.</span> are community defaults you should
-            confirm. Direct-hit numbers are exact; Lunar-reaction numbers are a clearly-labelled
+            confirm. Direct-hit numbers are exact; Lunar-reaction numbers are a clearly labelled
             estimate.
           </p>
           <p className="mt-2 font-mono text-[0.7rem] uppercase tracking-widest text-moon-600">
@@ -218,7 +218,7 @@ export function Calculator() {
 
             <ResultCard
               title="Direct Hit"
-              subtitle="Exact — the game's damage formula."
+              subtitle="Exact. The game's damage formula."
               tone="moon"
               stats={[
                 { label: "Non-crit", value: direct.nonCrit },
@@ -248,7 +248,7 @@ export function Calculator() {
 
             <ResultCard
               title="Lunar Reaction"
-              subtitle="Estimate — coefficients are community-sourced."
+              subtitle="Estimate. Coefficients are community-sourced."
               tone="halo"
               stats={[
                 { label: "HP passive", value: reaction.hpBonus * 100 },

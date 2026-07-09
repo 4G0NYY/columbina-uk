@@ -72,7 +72,7 @@ export function ProfileHero({ seedDate }: { seedDate: Date }) {
               title={
                 has("moon")
                   ? "The moon answers your patience."
-                  : "The Moon — she seems to watch back."
+                  : "The Moon. She seems to watch back."
               }
             />
           </div>

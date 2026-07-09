@@ -22,7 +22,7 @@ export interface Confirmable<T> {
 
 export const COLUMBINA = {
   name: "Columbina",
-  title: "Hyposelenia — The Little Dove Born Beneath the Moon",
+  title: "Hyposelenia · The Little Dove Born Beneath the Moon",
   element: "Hydro",
   weapon: "Catalyst",
   rarity: 5 as const,

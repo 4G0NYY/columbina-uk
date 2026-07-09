@@ -6,7 +6,7 @@ export function NotFound() {
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center">
       <Starfield count={60} />
-      <MoonPhase phase={0.03} size={140} title="A new moon — nothing to see" />
+      <MoonPhase phase={0.03} size={140} title="A new moon, nothing to see" />
       <p className="eyebrow mt-10 mb-3">New moon</p>
       <h1 className="font-display text-5xl font-light text-moon-50">Nothing dwells here</h1>
       <p className="mt-4 max-w-md text-moon-400">

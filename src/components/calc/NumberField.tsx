@@ -31,7 +31,7 @@ export function NumberField({
         {estimate && (
           <span
             className="rounded-full border border-halo/30 px-1.5 py-px font-mono text-[0.6rem] uppercase tracking-wider text-halo/80"
-            title="Community-sourced default — verify against your own build."
+            title="Community-sourced default. Verify against your own build."
           >
             est.
           </span>

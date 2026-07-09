@@ -65,7 +65,7 @@ export function Silvermoon() {
             </button>
           )}
 
-          <p className="mt-8 font-display text-sm italic text-lavender">…mm — mm — mmm…</p>
+          <p className="mt-8 font-display text-sm italic text-lavender">…mm-mm-mmm…</p>
 
           <Link
             to="/"

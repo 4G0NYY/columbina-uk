@@ -43,7 +43,7 @@ export function Landing() {
         <div className="mx-auto mb-6 h-px w-2/3 bg-gradient-to-r from-transparent via-moon-600/40 to-transparent" />
         <p className="eyebrow text-halo/70">Beyond here, the whole of the moon's tale</p>
         <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-moon-500">
-          Major Nod-Krai story spoilers follow — the Rächer of Solnari and Il Dottore arcs,
+          Major Nod-Krai story spoilers follow: the Rächer of Solnari and Il Dottore arcs,
           through to her homecoming.
         </p>
       </div>
@@ -63,8 +63,8 @@ export function Landing() {
           Reckon her Lunar tides
         </h2>
         <p className="mx-auto mb-8 max-w-xl text-moon-400">
-          A damage calculator built on the game's real formula — accurate to your own build, honest
-          about what is still community-sourced.
+          A damage calculator built on the game's real formula, accurate to your own build and
+          honest about what is still community-sourced.
         </p>
         <Link
           to="/calculator"
