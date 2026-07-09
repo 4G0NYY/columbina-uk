@@ -10,10 +10,10 @@
  *        repo → Settings → General → Features → tick "Discussions".
  *   2. Install the giscus GitHub App on this repo:  https://github.com/apps/giscus
  *   3. Open https://giscus.app, enter the repo `4G0NYY/columbina-uk`, and pick a
- *      Discussion category (create one called e.g. "Guestbook", Announcement-type).
+ *      Discussion category (the Announcement-type "Announcements" is ideal).
  *   4. giscus will show you a `data-repo-id` and `data-category-id`. Paste them
- *      below, replacing the two REPLACE_ME_… placeholders, and set the category
- *      name to match. That's it — the guestbook goes live on next deploy.
+ *      below, replacing the placeholders, and set `category` to the EXACT name
+ *      giscus shows (it must match the id). Live on next deploy.
  *
  * Until the two IDs are filled in, the /guestbook page shows a friendly
  * "not yet open" note instead of a broken widget.
@@ -22,7 +22,8 @@
 export const GISCUS = {
   repo: "4G0NYY/columbina-uk" as `${string}/${string}`,
   repoId: "R_kgDOTPpPaA",
-  category: "Guestbook",
+  // Must EXACTLY match the category name shown in giscus.app (you chose Announcements).
+  category: "Announcements",
   categoryId: "DIC_kwDOTPpPaM4DA0sX",
   /** Map each page to its own discussion thread; the guestbook uses one fixed term. */
   mapping: "specific",
