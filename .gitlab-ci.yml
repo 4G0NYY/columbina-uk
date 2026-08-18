@@ -1,0 +1,35 @@
+# GitLab CI/CD — translated from .github/workflows/deploy.yml, which is left in
+# place so the site can still be published from GitHub.
+#
+# GitLab Pages replaces the upload-pages-artifact / deploy-pages pair: the job has
+# to be called `pages` and everything it serves has to end up in `public/`.
+#
+# The apex custom domain (columbina.uk) is registered on this project under
+# Settings > Pages, so the site is served from the root and vite's base stays "/".
+# public/CNAME is kept for the GitHub path and is simply an inert file here.
+
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  tags: [docker]
+  image: node:20
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "web"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  # Don't let two publishes overlap, and don't cancel one that is in flight.
+  resource_group: pages
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - .npm/
+  script:
+    - npm ci --cache .npm --prefer-offline
+    - npm run build
+    - rm -rf public && mv dist public
+  artifacts:
+    paths:
+      - public
