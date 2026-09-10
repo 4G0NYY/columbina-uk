@@ -44,7 +44,7 @@ export function SiteFooter() {
             columbina.uk
           </span>
           <a
-            href="https://github.com/4g0nyy/columbina-uk"
+            href="https://gitlab.ramon.moe/4g0nyy/columbina-uk"
             target="_blank"
             rel="noreferrer noopener"
             aria-label="View this site's source on GitHub"
