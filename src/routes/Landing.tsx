@@ -79,20 +79,6 @@ export function Landing() {
       <GlossaryList />
       <TriviaNotes />
 
-      {/* Invitation to the guestbook */}
-      <section className="mx-auto max-w-3xl px-6 py-16 text-center">
-        <p className="eyebrow mb-4">Before you go</p>
-        <h2 className="mb-6 font-display text-2xl font-light text-moon-50 sm:text-3xl">
-          Leave a feather in the guestbook
-        </h2>
-        <Link
-          to="/guestbook"
-          className="inline-block rounded-full border border-moon-600/40 px-8 py-3 font-mono text-xs uppercase tracking-widest2 text-moon-200 transition-colors hover:border-halo/40 hover:text-halo"
-        >
-          Sign the Guestbook
-        </Link>
-      </section>
-
       {/* Bridge to the calculator */}
       <section className="mx-auto max-w-3xl px-6 pb-24 pt-8 text-center">
         <p className="eyebrow mb-4">And when the moon turns to war</p>

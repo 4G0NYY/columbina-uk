@@ -23,8 +23,6 @@ npm run preview    # preview the production build
   Night** vigil counting down to the next real full moon, a **Finnish/Nordic lexicon**, and **seven
   hidden secrets**. The whole page is washed by a **phase-reactive atmosphere** that brightens with
   tonight's real illumination.
-- **`/guestbook`** a moonlit guestbook, powered by giscus (GitHub Discussions). One-time setup lives
-  in `src/data/guestbook.ts`; until it's configured the page shows a friendly "not open yet" note.
 - **`/calculator`** a damage calculator. The engine (`src/lib/damage.ts`) is the game's exact,
   unit-tested damage formula, so it is accurate for whatever stats you enter from your own account.
   Numbers still community-sourced in patch 6.3 are flagged `est.` and are fully editable; Lunar
