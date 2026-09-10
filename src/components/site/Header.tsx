@@ -25,14 +25,6 @@ export function Header() {
             Gallery
           </Link>
           <Link
-            to="/guestbook"
-            className={`hidden font-mono text-xs uppercase tracking-widest2 transition-colors sm:inline ${
-              pathname === "/guestbook" ? "halo-text" : "text-moon-500 hover:text-moon-200"
-            }`}
-          >
-            Guestbook
-          </Link>
-          <Link
             to="/calculator"
             className={`font-mono text-xs uppercase tracking-widest2 transition-colors ${
               pathname === "/calculator"
@@ -47,3 +39,15 @@ export function Header() {
     </header>
   );
 }
+
+
+// If I ever re-add the guestbook (aka fix it)
+// Add this right after Gallery:
+//          </Link>
+//          <Link
+//            to="/guestbook"
+//            className={`hidden font-mono text-xs uppercase tracking-widest2 transition-colors sm:inline ${
+//              pathname === "/guestbook" ? "halo-text" : "text-moon-500 hover:text-moon-200"
+//            }`}
+//          >
+//            Guestbook
