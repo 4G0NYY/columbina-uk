@@ -4,6 +4,8 @@ node_modules/
 # Build output
 dist/
 dist-ssr/
+# tsc -b's incremental cache, regenerated on every build
+*.tsbuildinfo
 
 # Logs
 *.log
