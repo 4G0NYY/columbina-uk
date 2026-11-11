@@ -56,7 +56,7 @@ export function Landing() {
 
       {/* Spoiler veil before the deep story (Rächer & Dottore arcs) */}
       <div className="mx-auto max-w-3xl px-6 py-16 text-center">
-        <div className="mx-auto mb-6 h-px w-2/3 bg-gradient-to-r from-transparent via-moon-600/40 to-transparent" />
+        <div className="mx-auto mb-6 h-px w-2/3 bg-linear-to-r from-transparent via-moon-600/40 to-transparent" />
         <p className="eyebrow text-halo/70">Beyond here, the whole of the moon's tale</p>
         <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-moon-500">
           Major Nod-Krai story spoilers follow: the Rächer of Solnari and Il Dottore arcs,
@@ -73,7 +73,7 @@ export function Landing() {
       <MoonPrayerNight date={seedDate} />
 
       {/* Trivia: names, etymology, language, and small true things */}
-      <div className="mx-auto my-8 h-px w-2/3 max-w-3xl bg-gradient-to-r from-transparent via-moon-600/30 to-transparent" />
+      <div className="mx-auto my-8 h-px w-2/3 max-w-3xl bg-linear-to-r from-transparent via-moon-600/30 to-transparent" />
       <AliasesList />
       <EtymologyGrid />
       <GlossaryList />
