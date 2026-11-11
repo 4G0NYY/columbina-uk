@@ -12,7 +12,7 @@ export function LoreTimeline({ sections }: { sections: LoreSection[] }) {
       {/* The rail */}
       <span
         aria-hidden
-        className="absolute bottom-2 left-[calc(1.5rem+5px)] top-2 w-px bg-gradient-to-b from-transparent via-moon-600/30 to-transparent"
+        className="absolute bottom-2 left-[calc(1.5rem+5px)] top-2 w-px bg-linear-to-b from-transparent via-moon-600/30 to-transparent"
       />
       {sections.map((section) => (
         <li key={section.id} id={section.id} className="relative py-8 pl-10">

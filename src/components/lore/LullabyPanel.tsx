@@ -49,7 +49,7 @@ export function LullabyPanel() {
             aria-pressed={playing}
             aria-label={playing ? "Stop the lullaby" : "Play the lullaby"}
             title={playing ? "Let it rest" : "Listen"}
-            className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border border-halo/40 bg-midnight/50 text-halo backdrop-blur-sm transition-all hover:scale-105 hover:bg-halo/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-halo/50"
+            className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full border border-halo/40 bg-midnight/50 text-halo backdrop-blur-xs transition-all hover:scale-105 hover:bg-halo/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-halo/50"
           >
             {playing ? (
               <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden>

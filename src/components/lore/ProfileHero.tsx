@@ -120,7 +120,7 @@ export function ProfileHero({ seedDate }: { seedDate: Date }) {
             {CHIPS.map((chip) => (
               <li
                 key={chip}
-                className="rounded-full border border-moon-600/25 bg-midnight/40 px-4 py-1.5 font-mono text-[0.68rem] uppercase tracking-widest2 text-moon-300 backdrop-blur-sm"
+                className="rounded-full border border-moon-600/25 bg-midnight/40 px-4 py-1.5 font-mono text-[0.68rem] uppercase tracking-widest2 text-moon-300 backdrop-blur-xs"
               >
                 {chip}
               </li>
